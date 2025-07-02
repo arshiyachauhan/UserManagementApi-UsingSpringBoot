@@ -30,9 +30,9 @@ A Spring Boot-based RESTful API for managing user records with full CRUD operati
 ## 📁 Project Structure
 
 UserManagementApi-UsingSpringBoot/
-├── src/
-│ └── main/
-│ ├── java/org/usermanag/UserManagementAPI/
+├── src/**
+│ └── main/**
+│ ├── java/org/usermanag/UserManagementAPI/**
 │ │ ├── controller/UserController.java
 │ │ ├── model/User.java
 │ │ └── repository/UserRepository.java
@@ -45,7 +45,7 @@ UserManagementApi-UsingSpringBoot/
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/UserManagementApi-UsingSpringBoot.git
+git clone https://github.com/your-username/UserManagementApi-UsingSpringBoot.git  
 cd UserManagementApi-UsingSpringBoot
 
 ---
