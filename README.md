@@ -14,7 +14,6 @@ A Spring Boot-based RESTful API for managing user records with full CRUD operati
 - PostgreSQL database connectivity.
 - Uses Spring Data JPA for easy data handling.
 
----
 
 ## 🛠️ Tech Stack
 
@@ -40,15 +39,17 @@ UserManagementApi-UsingSpringBoot/
 │           └── application.properties
 ├── pom.xml
 
-
+---
+```
 ## 🔧 Getting Started
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/your-username/UserManagementApi-UsingSpringBoot.git  
 cd UserManagementApi-UsingSpringBoot
 
----
+```
 
 ### 2. Update src/main/resources/application.properties:
 
@@ -60,7 +61,7 @@ spring.datasource.username=your_db_username
 spring.datasource.password=your_db_password
 spring.jpa.hibernate.ddl-auto=update
 
----
+
 
 ### 3. Run The Application
 
