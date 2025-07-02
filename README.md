@@ -2,7 +2,6 @@
 
 A Spring Boot-based RESTful API for managing user records with full CRUD operations, input validation, and PostgreSQL integration.
 
----
 
 ## 🚀 Features
 
@@ -39,7 +38,6 @@ UserManagementApi-UsingSpringBoot/
 │           └── application.properties
 ├── pom.xml
 
----
 ```
 ## 🔧 Getting Started
 
@@ -65,10 +63,10 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 
 ### 3. Run The Application
-
+```bash
 mvn spring-boot:run
+```
 
----
 
 ### 🧪 API Endpoints
 ```text
@@ -77,4 +75,5 @@ GET-/api/users/{id}-Get user by ID
 POST-/api/users-Create new user
 PUT-/api/users/{id}-Update user
 DELETE-/api/users/{id}-Delete user
-
+```
+---
