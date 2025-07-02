@@ -75,5 +75,4 @@ GET-/api/users/{id}-Get user by ID
 POST-/api/users-Create new user
 PUT-/api/users/{id}-Update user
 DELETE-/api/users/{id}-Delete user
-```
----
+
