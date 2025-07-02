@@ -25,21 +25,21 @@ A Spring Boot-based RESTful API for managing user records with full CRUD operati
 - PostgreSQL
 - Maven
 
----
 
 ## 📁 Project Structure
 
+```text
 UserManagementApi-UsingSpringBoot/
-├── src/**
-│ └── main/**
-│ ├── java/org/usermanag/UserManagementAPI/**
-│ │ ├── controller/UserController.java
-│ │ ├── model/User.java
-│ │ └── repository/UserRepository.java
-│ └── resources/application.properties
+├── src/
+│   └── main/
+│       ├── java/org/usermanag/UserManagementAPI/
+│       │   ├── controller/UserController.java
+│       │   ├── model/User.java
+│       │   └── repository/UserRepository.java
+│       └── resources/
+│           └── application.properties
 ├── pom.xml
 
----
 
 ## 🔧 Getting Started
 
