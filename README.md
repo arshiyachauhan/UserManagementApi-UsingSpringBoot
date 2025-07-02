@@ -49,8 +49,6 @@ UserManagementApi-UsingSpringBoot/
 git clone https://github.com/your-username/UserManagementApi-UsingSpringBoot.git  
 cd UserManagementApi-UsingSpringBoot
 
-```
-
 ### 2. Update src/main/resources/application.properties:
 
 properties
