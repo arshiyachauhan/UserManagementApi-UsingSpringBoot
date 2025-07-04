@@ -37,6 +37,8 @@ public class UserController {
         List<User> savedUsers = userRepository.saveAll(users);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUsers);
     }
+    
+
 
     // GET all users
     @GetMapping
