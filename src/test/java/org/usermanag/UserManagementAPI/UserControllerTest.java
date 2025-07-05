@@ -101,6 +101,7 @@ public class UserControllerTest {
 	            .andExpect(jsonPath("$[0].name",is("Alice Brown")))
 	            .andExpect(jsonPath("$[1].email", is("rohan.gray@example.com")));
 	}
+	
 	@Test
 	void testDeleteUserFound() throws Exception {
 	    mockMvc.perform(delete("/api/users/" + user1.getId())
@@ -116,7 +117,6 @@ public class UserControllerTest {
 	            .contentType(MediaType.APPLICATION_JSON))
 	            .andExpect(status().isNotFound());
 	}
-
 
 
 }
