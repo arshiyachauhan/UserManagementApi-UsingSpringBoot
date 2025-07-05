@@ -18,6 +18,7 @@ import org.usermanag.UserManagementAPI.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -100,6 +101,22 @@ public class UserControllerTest {
 	            .andExpect(jsonPath("$[0].name",is("Alice Brown")))
 	            .andExpect(jsonPath("$[1].email", is("rohan.gray@example.com")));
 	}
+	@Test
+	void testDeleteUserFound() throws Exception {
+	    mockMvc.perform(delete("/api/users/" + user1.getId())
+	            .contentType(MediaType.APPLICATION_JSON))
+	            .andExpect(status().isNoContent());
+	}
+
+	@Test
+	void testDeleteUserNotFound() throws Exception {
+	    Long nonExistingId = 9999L;
+
+	    mockMvc.perform(delete("/api/users/" + nonExistingId)
+	            .contentType(MediaType.APPLICATION_JSON))
+	            .andExpect(status().isNotFound());
+	}
+
 
 
 }
