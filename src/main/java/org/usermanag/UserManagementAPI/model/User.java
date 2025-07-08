@@ -8,6 +8,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
+
+
 
 @Entity
 @Table(name = "users") 
@@ -21,8 +25,25 @@ public class User {
     @Size(min = 2, max = 100, message = "Name must be between 2 and 100 characters")
     private String name;
 
-    @NotBlank(message = "Email is required")
-    @Email(message = "Email should be valid")
+//    @NotBlank(message = "Email is required")
+//    @Email(message = "Email should be valid")
+//    private String email;
+//    
+    //IMPLEMENTING SpringBoot SECURITY
+    
+    @NotBlank(message="Password is required")
+    private String password;
+    
+    @ElementCollection(fetch= FetchType.EAGER)
+    @CollectionTable(name="user_roles",joinColumns=
+    @JoinColumn(name= "user_id"))
+    @Column(name="role")
+    private Set<String> roles= new HashSet<>();
+    
+    //no two same emails
+    @NotBlank(message="Email is required")
+    @Email(message="Email should be valid")
+    @Column(unique= true)
     private String email;
 
     // Timestamp fields
@@ -85,4 +106,21 @@ public class User {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
+    }
+
 }
