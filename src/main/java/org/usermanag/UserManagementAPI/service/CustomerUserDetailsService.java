@@ -12,7 +12,7 @@ import org.usermanag.UserManagementAPI.model.User;
 import org.usermanag.UserManagementAPI.repository.UserRepository;
 
 @Service
-public class UserDetailsServiceImpl implements UserDetailsService {
+public class CustomerUserDetailsService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;

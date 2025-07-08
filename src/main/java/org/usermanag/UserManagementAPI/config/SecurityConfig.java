@@ -17,15 +17,16 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.usermanag.UserManagementAPI.service.UserDetailsServiceImpl;
+import org.usermanag.UserManagementAPI.service.CustomerUserDetailsService;
+
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
-    private final UserDetailsServiceImpl customUserDetailsService;
+    private final CustomerUserDetailsService customUserDetailsService;
 
-    public SecurityConfig(UserDetailsServiceImpl customUserDetailsService) {
+    public SecurityConfig(CustomerUserDetailsService customUserDetailsService) {
         this.customUserDetailsService = customUserDetailsService;
     }
 
@@ -76,4 +77,7 @@ public class SecurityConfig {
 
         return http.build();
     }
+    
 }
+    
+    
