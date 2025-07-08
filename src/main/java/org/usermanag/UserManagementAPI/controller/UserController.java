@@ -31,7 +31,7 @@ public class UserController {
     private PasswordEncoder passwordEncoder;
 
     // POST single user
-    @PostMapping
+    @PostMapping("/single")
     public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
         User savedUser = userRepository.save(user);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
